@@ -1,6 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import reducer from "./reducers/hackerNewsReducer.js";
+import hackerNewsReducer from "./reducers/hackerNewsReducer.js";
+import mediumReducer from "./reducers/mediumReducer.js";
 
 export default configureStore({
-  reducer,
+  reducer: {
+    hackerNews: hackerNewsReducer,
+    medium: mediumReducer,
+  },
 });
